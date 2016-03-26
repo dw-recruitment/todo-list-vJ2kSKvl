@@ -7,5 +7,14 @@
                   [ring/ring-core "1.4.0"]
                   [ring/ring-jetty-adapter "1.4.0"]
                   [compojure "1.5.0"]
+                  [environ "1.0.2"]
                   ]
+  :plugins [[lein-environ "1.0.2"]]
+  :profiles {
+    :dev {
+      :env {
+        :port "3000"
+        }
+      }
+    }
   )
