@@ -9,10 +9,13 @@
                   [ring/ring-jetty-adapter "1.4.0"]
                   [compojure "1.5.0"]
                   [environ "1.0.2"]
-                  [org.clojure/java.jdbc "0.5.0"]
+                  [org.clojure/java.jdbc "0.3.7"]
                   [org.postgresql/postgresql "9.4.1208.jre7"]
                   [java-jdbc/dsl "0.1.3"]
+                  [korma "0.4.2"]
+                  [hiccup "1.0.4"]
                   ]
+  :main todo.core
   :plugins [[lein-environ "1.0.2"]]
   :profiles {
     :dev {
