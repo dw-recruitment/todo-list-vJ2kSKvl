@@ -19,6 +19,14 @@
 (korma-core/defentity todolist
   (korma-core/entity-fields :task :done))
 
-(def select-todo-items (map vec (korma-core/select todolist
-    ))
+(def select-todo-items
+  ;(map vec (korma-core/select todolist))
+  ;(korma-core/exec-raw ["SELECT * FROM todolist"])
+  (korma-core/select todolist)
+  )
+
+(defn insert-item [task]
+  (let [qry (str "INSERT INTO todolist (task, todo, done) VALUES ('" task "',true,false);")]
+    (korma-core/exec-raw [qry])
+    )
   )
